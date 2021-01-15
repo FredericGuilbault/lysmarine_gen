@@ -14,10 +14,9 @@ pip3 install systems Mopidy-MusicBox-Webclient
 apt-get -y install gstreamer1.0-plugins-bad
 pip3 install https://github.com/natumbri/mopidy-youtube/archive/develop.zip
 
-# Enable mopidy service
+# Enable Mopidy service
 systemctl enable mopidy
 
-install -m 644 $FILE_FOLDER/.asoundrc "/home/user/"
 install -m 644 $FILE_FOLDER/mopidy.conf "/etc/mopidy/"
 
 rm -rf ~/.cache/pip

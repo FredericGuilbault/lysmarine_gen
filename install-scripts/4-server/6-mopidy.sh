@@ -5,8 +5,7 @@
 
 apt-get -yq --no-install-recommends install mopidy mopidy-mpd mopidy-tunein
 
-adduser mopidy video
-adduser mopidy audio
+usermod -a -G video mopidy
 
 # Install some needed packages
 python3 -m pip install systems

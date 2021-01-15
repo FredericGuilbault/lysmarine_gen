@@ -7,16 +7,12 @@ apt-get -yq --no-install-recommends install mopidy mopidy-mpd mopidy-tunein
 
 usermod -a -G video mopidy
 
-# Install some needed packages
-python3 -m pip install systems
-
 # Install Mopidy MusicBox Web Client:
-python3 -m pip install Mopidy-MusicBox-Webclient
+pip3 install systems Mopidy-MusicBox-Webclient
 
 # Install YouTube support
 apt-get -y install gstreamer1.0-plugins-bad
-#python3 -m pip install --pre Mopidy-YouTube
-python3 -m pip install https://github.com/natumbri/mopidy-youtube/archive/develop.zip
+pip3 install https://github.com/natumbri/mopidy-youtube/archive/develop.zip
 
 # Enable mopidy service
 systemctl enable mopidy
